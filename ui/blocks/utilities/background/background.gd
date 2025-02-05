@@ -1,9 +1,9 @@
 @tool
 extends Control
 
-const BlockTreeUtil = preload("res://addons/reblocks/ui/block_tree_util.gd")
-const Constants = preload("res://addons/reblocks/ui/constants.gd")
-const Types = preload("res://addons/reblocks/types/types.gd")
+const BlockTreeUtil = preload("res://addons/block_code/ui/block_tree_util.gd")
+const Constants = preload("res://addons/block_code/ui/constants.gd")
+const Types = preload("res://addons/block_code/types/types.gd")
 
 enum ControlPart {
 	TOP,
@@ -79,39 +79,41 @@ func _get_box_shape(box_size: Vector2 = Vector2.ONE) -> PackedVector2Array:
 			Vector2(0.0, 0.0),
 		]
 	)
+	
+	# For later: find a way to get size of the top box shape based on what block it is, and match the size
+func _get_bottom_box_shape(box_size: Vector2 = Vector2.ONE) -> PackedVector2Array:
+	return PackedVector2Array(
+		[
+			Vector2(8.0, 0.0),
+			Vector2(box_size.x + 26, 0.0),
+			Vector2(box_size.x + 26, box_size.y),
+			Vector2(0.0, box_size.y),
+			Vector2(0.0, 0.0),
+		]
+	)
 
 
 func _get_knob_shape(displacement: Vector2 = Vector2.ZERO) -> PackedVector2Array:
 	return PackedVector2Array(
 		[
 			Vector2(displacement.x, displacement.y),
-			Vector2(displacement.x + Constants.KNOB_Z, displacement.y + Constants.KNOB_H),
-			Vector2(displacement.x + Constants.KNOB_Z + Constants.KNOB_W, displacement.y + Constants.KNOB_H),
-			Vector2(displacement.x + Constants.KNOB_Z * 2 + Constants.KNOB_W, displacement.y),
+			Vector2(displacement.x + Constants.KNOB_Z +8, displacement.y + Constants.KNOB_H +4),
+			Vector2(displacement.x + Constants.KNOB_Z  + Constants.KNOB_W -12, displacement.y + Constants.KNOB_H +4),
+			Vector2(displacement.x + Constants.KNOB_Z * 2 + Constants.KNOB_W -4, displacement.y),
 		]
 	)
 
 
 func _get_entry_shape() -> PackedVector2Array:
 	var box_shape = _get_box_shape(size)
+	var box_size: Vector2 = Vector2.ZERO
 	var ellipsis = PackedVector2Array(
 		[
-			Vector2(5, -4.012612),
-			Vector2(10, -7.240165),
-			Vector2(15, -9.822201),
-			Vector2(20, -11.84718),
-			Vector2(25, -13.37339),
-			Vector2(30, -14.43944),
-			Vector2(35, -15.06994),
-			Vector2(40, -15.27864),
-			Vector2(45, -15.06994),
-			Vector2(50, -14.43944),
-			Vector2(55, -13.37339),
-			Vector2(60, -11.84718),
-			Vector2(65, -9.822201),
-			Vector2(70, -7.240165),
-			Vector2(75, -4.012612),
-			Vector2(80, 0),
+			
+			
+			Vector2(box_size.x, box_size.y -8),
+			Vector2(20, -8.0),
+			Vector2(20, 0),
 		]
 	)
 	var bottom_knob_shape = _get_knob_shape(Vector2(Constants.KNOB_X, size.y))
@@ -199,6 +201,7 @@ func _get_control_top_fill_shape() -> PackedVector2Array:
 	var top_knob_shape = _get_knob_shape(Vector2(Constants.KNOB_X, 0.0))
 	var bottom_knob_shape = _get_knob_shape(Vector2(Constants.CONTROL_MARGIN + Constants.KNOB_X, size.y))
 	bottom_knob_shape.reverse()
+	
 	return box_shape.slice(0, 1) + top_knob_shape + box_shape.slice(1, 3) + bottom_knob_shape + box_shape.slice(3)
 
 
@@ -210,11 +213,11 @@ func _get_control_top_stroke_shape() -> PackedVector2Array:
 
 
 func _get_control_bottom_fill_shape() -> PackedVector2Array:
-	var box_shape = _get_box_shape(size)
+	var bottom_box_shape = _get_bottom_box_shape(size)
 	var top_knob_shape = _get_knob_shape(Vector2(Constants.CONTROL_MARGIN + Constants.KNOB_X, 0.0))
 	var bottom_knob_shape = _get_knob_shape(Vector2(Constants.KNOB_X, size.y))
 	bottom_knob_shape.reverse()
-	return box_shape.slice(0, 1) + top_knob_shape + box_shape.slice(1, 3) + bottom_knob_shape + box_shape.slice(3)
+	return bottom_box_shape.slice(0, 1) + top_knob_shape + bottom_box_shape.slice(1, 3) + bottom_knob_shape + bottom_box_shape.slice(3)
 
 
 func _get_control_bottom_stroke_shape() -> PackedVector2Array:

@@ -22,52 +22,52 @@ const DRAG_PREVIEW_COLOR = Color(225, 242, 0, 0.3)
 const BUILTIN_CATEGORIES_PROPS: Dictionary = {
 	"Lifecycle":
 	{
-		"color": Color("EA323C"),
+		"color": Color("ff001aff"),
 		"order": 10,
 	},
 	"Lifecycle | Game":
 	{
-		"color": Color("EA323C"),
+		"color": Color("ff001aff"),
 		"order": 12,
 	},
 	"Lifecycle | Spawn":
 	{
-		"color": Color("EA323C"),
+		"color": Color("ff001aff"),
 		"order": 15,
 	},
 	"Transform | Position":
 	{
-		"color": Color("C42430"),
+		"color": Color("773344ff"),
 		"order": 20,
 	},
 	"Transform | Rotation":
 	{
-		"color": Color("891E2B"),
+		"color": Color("773344ff"),
 		"order": 30,
 	},
 	"Transform | Scale":
 	{
-		"color": Color("571C27"),
+		"color": Color("773344ff"),
 		"order": 40,
 	},
 	"Graphics | Modulate":
 	{
-		"color": Color("93388F"),
+		"color": Color("a37276ff"),
 		"order": 50,
 	},
 	"Graphics | Visibility":
 	{
-		"color": Color("622461"),
+		"color": Color("a37276ff"),
 		"order": 60,
 	},
 	"Graphics | Viewport":
 	{
-		"color": Color("3B1443"),
+		"color": Color("a37276ff"),
 		"order": 61,
 	},
 	"Graphics | Animation":
 	{
-		"color": Color("9400d5ea"),
+		"color": Color("a37276ff"),
 		"order": 62,
 	},
 	"UI":
@@ -77,37 +77,37 @@ const BUILTIN_CATEGORIES_PROPS: Dictionary = {
 	},
 	"Sounds":
 	{
-		"color": Color("DB3FFD"),
+		"color": Color("7606B8"),
 		"order": 70,
 	},
 	"Physics | Mass":
 	{
-		"color": Color("a5b1c2"),
+		"color": Color("264653ff"),
 		"order": 80,
 	},
 	"Physics | Velocity":
 	{
-		"color": Color("92A1B9"),
+		"color": Color("264653ff"),
 		"order": 90,
 	},
 	"Input":
 	{
-		"color": Color("d54322"),
+		"color": Color("e76f51ff"),
 		"order": 100,
 	},
 	"Communication | Methods":
 	{
-		"color": Color("7A09FA"),
+		"color": Color("2a9d8fff"),
 		"order": 110,
 	},
 	"Communication | Nodes":
 	{
-		"color": Color("3003D9"),
+		"color": Color("2a9d8fff"),
 		"order": 115,
 	},
 	"Communication | Groups":
 	{
-		"color": Color("0C0293"),
+		"color": Color("2a9d8fff"),
 		"order": 120,
 	},
 	"Info | Score":
@@ -117,32 +117,32 @@ const BUILTIN_CATEGORIES_PROPS: Dictionary = {
 	},
 	"Loops":
 	{
-		"color": Color("E69C69"),
+		"color": Color("e9c46aff"),
 		"order": 140,
 	},
 	"Logic | Conditionals":
 	{
-		"color": Color("BF6F4A"),
+		"color": Color("e9c46aff"),
 		"order": 150,
 	},
 	"Logic | Comparison":
 	{
-		"color": Color("8A4836"),
+		"color": Color("e9c46aff"),
 		"order": 160,
 	},
 	"Logic | Boolean":
 	{
-		"color": Color("5D2C28"),
+		"color": Color("e9c46aff"),
 		"order": 170,
 	},
 	"Variables":
 	{
-		"color": Color("e06000"),
+		"color": Color("e76f51ff"),
 		"order": 180,
 	},
 	"Math":
 	{
-		"color": Color("424C6E"),
+		"color": Color("f4a261ff"),
 		"order": 190,
 	},
 	"Log":
