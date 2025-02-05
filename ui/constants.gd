@@ -22,7 +22,7 @@ const DRAG_PREVIEW_COLOR = Color(225, 242, 0, 0.3)
 const BUILTIN_CATEGORIES_PROPS: Dictionary = {
 	"Lifecycle":
 	{
-		"color": Color("EA323C"),
+		"color": Color("EA223C"),
 		"order": 10,
 	},
 	"Lifecycle | Game":
