@@ -8,7 +8,6 @@ const Types = preload("res://addons/reblocks/types/types.gd")
 const TxUtils := preload("res://addons/reblocks/translation/utils.gd")
 const ScriptWindow := preload("res://addons/reblocks/ui/script_window/script_window.tscn")
 const ReBlocksIcon := preload("res://addons/reblocks/Reblocksv2.svg")
-const ReBlockSingleton := "res://addons/reblocks/singleton/reblocks_signal_bus.gd"
 
 
 static var main_panel: MainPanel
