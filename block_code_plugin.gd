@@ -7,7 +7,6 @@ const MainPanel = preload("res://addons/reblocks/ui/main_panel.gd")
 const Types = preload("res://addons/reblocks/types/types.gd")
 const TxUtils := preload("res://addons/reblocks/translation/utils.gd")
 const ReBlocksIcon := preload("res://addons/reblocks/Reblocksv2.svg")
-const ReBlockSingleton := "res://addons/reblocks/singleton/reblocks_signal_bus.gd"
 
 
 static var main_panel: MainPanel
@@ -101,7 +100,6 @@ func _exit_tree():
 
 
 func _ready():
-	#ReBlocks.script_window_opened.connect(script_window_opened)
 	editor_inspector.connect("edited_object_changed", _on_editor_inspector_edited_object_changed)
 	_on_editor_inspector_edited_object_changed()
 

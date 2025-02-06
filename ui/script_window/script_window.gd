@@ -1,8 +1,6 @@
 @tool
 extends Window
 
-const MainScene := preload("res://addons/reblocks/ui/main_panel.tscn")
-
 @onready var script_label: CodeEdit = $"PanelContainer/VBox/Code"
 
 var script_content: String = ""
@@ -25,10 +23,6 @@ func _remove_font_color_alpha_clamp() -> void:
 	var font_readonly_color = script_label.get_theme_color("font_readonly_color")
 	font_readonly_color.a = 1
 	script_label.add_theme_color_override("font_readonly_color", font_readonly_color)
-
-
-func _ready() -> void:
-	MainScene.script_updated.connect(update_script)
 
 
 func update_script(script: String) -> void:

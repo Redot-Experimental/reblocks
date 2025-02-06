@@ -69,7 +69,7 @@ text = "Copy"
 [node name="WindowButton" type="Button" parent="PanelContainer/CodeContainer/HBoxContainer/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 text = "Open Window"
 
 [connection signal="pressed" from="PanelContainer/CodeContainer/HBoxContainer/MarginContainer/HBoxContainer/CopyCode" to="." method="_on_copy_code_pressed"]

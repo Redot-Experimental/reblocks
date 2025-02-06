@@ -2,9 +2,6 @@
 extends HBoxContainer
 
 signal script_window_opened
-signal script_window_closed
-
-const MainScene := preload("res://addons/reblocks/ui/main_panel.tscn")
 
 @onready var script_label: CodeEdit = $"PanelContainer/CodeContainer/Code"
 @onready var window_button: Button = %WindowButton
@@ -33,11 +30,6 @@ func _remove_font_color_alpha_clamp() -> void:
 	script_label.add_theme_color_override("font_readonly_color", font_readonly_color)
 
 
-func _ready() -> void:
-	update_window_button(window_mode)
-	MainScene.script_updated.connect(update_script)
-
-
 func update_script(script: String) -> void:
 	_apply_editor_syntax_highlighter()
 	_remove_font_color_alpha_clamp()
@@ -50,14 +42,4 @@ func _on_copy_code_pressed() -> void:
 
 
 func _on_window_button_pressed() -> void:
-	if window_button.text == "Open Window":
-		script_window_opened.emit()
-	else:
-		script_window_closed.emit()
-
-
-func update_window_button(value: bool) -> void:
-	if value == true:
-		window_button.text = "Close Window"
-	else:
-		window_button.text = "Open Window"
+	script_window_opened.emit()
