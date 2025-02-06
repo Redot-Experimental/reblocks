@@ -18,7 +18,7 @@ func _ready():
 	var category_title = category.name.get_slice(" |", 0)
 
 	if not self.is_part_of_edited_scene():
-		var texture = load("res://addons/block_code/ui/picker/categories/icons/" + category_title.to_lower() + ".svg")
+		var texture = load("res://addons/reblocks/ui/picker/categories/icons/" + category_title.to_lower() + ".svg")
 		_button.icon = texture
 		_panel.modulate = category.color
 
