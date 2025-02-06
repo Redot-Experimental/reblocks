@@ -4,6 +4,10 @@
 
 
 
+![ReBlocksLogo](Reblocks.png)
+
+
+
 ReBlocks is a fork of the very good Block Coding plugin by [Endless OS Foundation](https://endlessos.org). While their mission is to provide a way to learn to program and eventually move to code, we want to provide a general use visual tool for making games, that will both enable users to make any kind of game they want without necessarily moving to code.
 
 ## Background

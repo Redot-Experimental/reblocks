@@ -1,9 +1,9 @@
 @tool
 extends Control
 
-const BlockTreeUtil = preload("res://addons/block_code/ui/block_tree_util.gd")
-const Constants = preload("res://addons/block_code/ui/constants.gd")
-const Types = preload("res://addons/block_code/types/types.gd")
+const BlockTreeUtil = preload("res://addons/reblocks/ui/block_tree_util.gd")
+const Constants = preload("res://addons/reblocks/ui/constants.gd")
+const Types = preload("res://addons/reblocks/types/types.gd")
 
 enum ControlPart {
 	TOP,
