@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmusxj1ppspnp"
-path="res://.godot/imported/block_code_node.svg-ec44d62670f5745547380d82dd01a2b1.ctex"
+path="res://.godot/imported/block_code_node.svg-c652aef58e872e066bb0462e7d6dc430.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://addons/reblocks/block_code_node/block_code_node.svg"
-dest_files=["res://.godot/imported/block_code_node.svg-ec44d62670f5745547380d82dd01a2b1.ctex"]
+dest_files=["res://.godot/imported/block_code_node.svg-c652aef58e872e066bb0462e7d6dc430.ctex"]
 
 [params]
 

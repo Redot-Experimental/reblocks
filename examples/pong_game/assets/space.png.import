@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceiq8wmlnnnif"
-path="res://.godot/imported/space.png-8022dfae750dab8949f3a877340ebde9.ctex"
+path="res://.godot/imported/space.png-c7f942dd0f1f86f1a213ca5b4d0f9924.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://addons/reblocks/examples/pong_game/assets/space.png"
-dest_files=["res://.godot/imported/space.png-8022dfae750dab8949f3a877340ebde9.ctex"]
+dest_files=["res://.godot/imported/space.png-c7f942dd0f1f86f1a213ca5b4d0f9924.ctex"]
 
 [params]
 

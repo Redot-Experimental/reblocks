@@ -1,8 +1,8 @@
 [gd_resource type="Resource" load_steps=7 format=3 uid="uid://c5e1byehtxwc0"]
 
-[ext_resource type="Script" path="res://addons/reblocks/code_generation/block_definition.gd" id="1_emeuv"]
-[ext_resource type="Script" path="res://addons/reblocks/code_generation/option_data.gd" id="1_xu43h"]
-[ext_resource type="Script" path="res://addons/reblocks/blocks/graphics/animationplayer_play.gd" id="2_7ymgi"]
+[ext_resource type="Script" uid="uid://cfmvxsm2ok4ek" path="res://addons/reblocks/code_generation/block_definition.gd" id="1_emeuv"]
+[ext_resource type="Script" uid="uid://cteah6oqsmew0" path="res://addons/reblocks/code_generation/option_data.gd" id="1_xu43h"]
+[ext_resource type="Script" uid="uid://cx6c5ey7kmdcp" path="res://addons/reblocks/blocks/graphics/animationplayer_play.gd" id="2_7ymgi"]
 
 [sub_resource type="Resource" id="Resource_qpxn2"]
 script = ExtResource("1_xu43h")

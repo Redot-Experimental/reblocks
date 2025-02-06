@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bc7jd3d8m5spt"
-path="res://.godot/imported/wall_hit.ogg-49ced0c269405870b16a99ad868f67ce.oggvorbisstr"
+path="res://.godot/imported/wall_hit.ogg-3ccdcdc4bd39be4203034d085d950b98.oggvorbisstr"
 
 [deps]
 
 source_file="res://addons/reblocks/examples/pong_game/assets/wall_hit.ogg"
-dest_files=["res://.godot/imported/wall_hit.ogg-49ced0c269405870b16a99ad868f67ce.oggvorbisstr"]
+dest_files=["res://.godot/imported/wall_hit.ogg-3ccdcdc4bd39be4203034d085d950b98.oggvorbisstr"]
 
 [params]
 
