@@ -1,14 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2tvodrmli2ar"]
 
-[ext_resource type="Script" uid="uid://c1esa7mkimtjv" path="res://addons/reblocks/ui/script_window/split_script_window.gd" id="1_pcqlh"]
+[ext_resource type="Script" path="res://addons/reblocks/ui/script_window/split_script_window.gd" id="1_pcqlh"]
 
 [sub_resource type="SystemFont" id="SystemFont_r6ct2"]
 font_names = PackedStringArray("DejaVu Sans Mono")
 subpixel_positioning = 0
 
-[sub_resource type="GDScriptSyntaxHighlighter" id="GDScriptSyntaxHighlighter_3qk2k"]
-resource_local_to_scene = false
-resource_name = ""
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_3qk2k"]
 
 [node name="SplitScriptWindow" type="HBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
@@ -45,7 +43,7 @@ theme_override_colors/font_readonly_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_fonts/font = SubResource("SystemFont_r6ct2")
 text = " "
 editable = false
-syntax_highlighter = SubResource("GDScriptSyntaxHighlighter_3qk2k")
+syntax_highlighter = SubResource("CodeHighlighter_3qk2k")
 highlight_all_occurrences = true
 highlight_current_line = true
 draw_tabs = true

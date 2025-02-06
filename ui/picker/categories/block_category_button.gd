@@ -9,20 +9,19 @@ signal selected
 var category: BlockCategory
 
 @onready var _panel := %Panel
-@onready var _button := %Button
+@onready var _label := %Label
 
 
 func _ready():
 	if not category:
 		category = BlockCategory.new("Example", Color.RED)
-	var category_title = category.name.get_slice(" |", 0)
 
 	if not self.is_part_of_edited_scene():
-		var texture = load("res://addons/reblocks/ui/picker/categories/icons/" + category_title.to_lower() + ".svg")
-		_button.icon = texture
-		_panel.modulate = category.color
+		var new_stylebox: StyleBoxFlat = _panel.get_theme_stylebox("panel").duplicate()
+		new_stylebox.bg_color = category.color
+		_panel.add_theme_stylebox_override("panel", new_stylebox)
 
-	_button.tooltip_text = tr(category_title)
+	_label.text = tr(category.name)
 
 
 func _on_button_pressed():

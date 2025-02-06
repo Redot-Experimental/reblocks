@@ -4,6 +4,8 @@ extends HBoxContainer
 signal script_window_opened
 signal script_window_closed
 
+const MainScene := preload("res://addons/reblocks/ui/main_panel.tscn")
+
 @onready var script_label: CodeEdit = $"PanelContainer/CodeContainer/Code"
 @onready var window_button: Button = %WindowButton
 @onready var code_container: VBoxContainer = $"PanelContainer/CodeContainer"
@@ -33,7 +35,7 @@ func _remove_font_color_alpha_clamp() -> void:
 
 func _ready() -> void:
 	update_window_button(window_mode)
-	ReBlocks.script_updated.connect(update_script)
+	MainScene.script_updated.connect(update_script)
 
 
 func update_script(script: String) -> void:

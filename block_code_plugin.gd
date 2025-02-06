@@ -106,14 +106,6 @@ func _ready():
 	_on_editor_inspector_edited_object_changed()
 
 
-func _enable_plugin() -> void:
-	add_autoload_singleton(PluginName, ReBlockSingleton)
-
-
-func _disable_plugin() -> void:
-	remove_autoload_singleton(PluginName)
-
-
 func _on_editor_inspector_edited_object_changed():
 	var edited_object = editor_inspector.get_edited_object()
 	var block_code_node = edited_object as BlockCode

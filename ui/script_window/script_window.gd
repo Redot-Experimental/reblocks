@@ -1,6 +1,8 @@
 @tool
 extends Window
 
+const MainScene := preload("res://addons/reblocks/ui/main_panel.tscn")
+
 @onready var script_label: CodeEdit = $"PanelContainer/VBox/Code"
 
 var script_content: String = ""
@@ -26,7 +28,7 @@ func _remove_font_color_alpha_clamp() -> void:
 
 
 func _ready() -> void:
-	ReBlocks.script_updated.connect(update_script)
+	MainScene.script_updated.connect(update_script)
 
 
 func update_script(script: String) -> void:

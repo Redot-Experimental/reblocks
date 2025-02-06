@@ -34,10 +34,12 @@ const Constants = preload("res://addons/reblocks/ui/constants.gd")
 
 var _block_code_nodes: Array
 var _collapsed: bool = false
+var _window_active: bool = false
+var script_window = null
 
 var split_script_visibility: bool = false:
-	set(new_value):
-		split_script_visibility = new_value
+	set(value):
+		split_script_visibility = value
 		_change_split_script_visibility(split_script_visibility)
 
 var undo_redo: EditorUndoRedoManager:
@@ -142,7 +144,7 @@ func _on_script_window_closed() -> void:
 
 
 func _script_window_opened() -> void:
-	var script_window = ScriptWindow.instantiate()
+	script_window = ScriptWindow.instantiate()
 	EditorInterface.popup_dialog(script_window)
 	_update_script()
 	await script_window.close_requested
@@ -168,9 +170,13 @@ func _update_script() -> void:
 	
 	if block_script != null:
 		block_script = block_script.duplicate(true)
-		ReBlocks.script_updated.emit(block_script.generated_script)
+		_split_script_window.update_script(block_script.generated_script)
+		if script_window != null:
+			script_window.update_script(block_script.generated_script)
 	else:
-		ReBlocks.script_updated.emit(" ")
+		_split_script_window.update_script(" ")
+		if script_window != null:
+			script_window.update_script(" ")
 #endregion
 
 
@@ -236,7 +242,8 @@ func save_script():
 	block_script.version = Constants.CURRENT_DATA_VERSION
 
 	undo_redo.commit_action()
-	ReBlocks.script_updated.emit(block_script.generated_script)
+	#script_updated.emit(block_script.generated_script)
+	_update_script()
 
 
 func _input(event):

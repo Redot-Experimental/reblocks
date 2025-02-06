@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfvq21qp2l363"
-path="res://.godot/imported/graphics.svg-cb4f23d8db2eb8b1314d97d84a9d0f87.ctex"
+uid="uid://b74a25ua3bnur"
+path="res://.godot/imported/Reblocks.png-d1c246f0c6f1f875f87739ecd7c3dff5.ctex"
 metadata={
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/reblocks/ui/picker/categories/icons/graphics.svg"
-dest_files=["res://.godot/imported/graphics.svg-cb4f23d8db2eb8b1314d97d84a9d0f87.ctex"]
+source_file="res://addons/reblocks/Reblocks.png"
+dest_files=["res://.godot/imported/Reblocks.png-d1c246f0c6f1f875f87739ecd7c3dff5.ctex"]
 
 [params]
 
@@ -33,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=true
-editor/convert_colors_with_editor_theme=false
