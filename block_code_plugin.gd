@@ -6,9 +6,7 @@ const MainPanelScene := preload("res://addons/reblocks/ui/main_panel.tscn")
 const MainPanel = preload("res://addons/reblocks/ui/main_panel.gd")
 const Types = preload("res://addons/reblocks/types/types.gd")
 const TxUtils := preload("res://addons/reblocks/translation/utils.gd")
-const ScriptWindow := preload("res://addons/reblocks/ui/script_window/script_window.tscn")
 const ReBlocksIcon := preload("res://addons/reblocks/Reblocksv2.svg")
-const ReBlockSingleton := "res://addons/reblocks/singleton/reblocks_signal_bus.gd"
 
 
 static var main_panel: MainPanel
@@ -48,8 +46,8 @@ func _enter_tree():
 	editor_inspector = EditorInterface.get_inspector()
 
 	main_panel = MainPanelScene.instantiate()
-	main_panel.script_window_requested.connect(script_window_requested)
 	main_panel.undo_redo = get_undo_redo()
+	
 	EditorInterface.get_editor_main_screen().add_child(main_panel)
 	block_inspector_plugin = BlockInspectorPlugin.new()
 	add_inspector_plugin(block_inspector_plugin)
@@ -79,16 +77,6 @@ func _enter_tree():
 		EditorInterface.set_current_feature_profile("block_code")
 
 
-func script_window_requested(script: String):
-	var script_window = ScriptWindow.instantiate()
-	script_window.script_content = script
-	EditorInterface.popup_dialog(script_window)
-	await script_window.close_requested
-
-	script_window.queue_free()
-	script_window = null
-
-
 func _exit_tree():
 	remove_translation_parser_plugin(_tx_parser_plugin)
 	remove_inspector_plugin(block_inspector_plugin)
@@ -114,14 +102,6 @@ func _exit_tree():
 func _ready():
 	editor_inspector.connect("edited_object_changed", _on_editor_inspector_edited_object_changed)
 	_on_editor_inspector_edited_object_changed()
-
-
-func _enable_plugin() -> void:
-	add_autoload_singleton(PluginName, ReBlockSingleton)
-
-
-func _disable_plugin() -> void:
-	remove_autoload_singleton(PluginName)
 
 
 func _on_editor_inspector_edited_object_changed():

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g10ct6m5goi6"
-path="res://.godot/imported/file_broken.svg-b3a1f0e4d54ed488e76a2c99c48cdeac.ctex"
+path="res://.godot/imported/file_broken.svg-4eaab408643b07ce95d90d59c6c11ee5.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://addons/reblocks/ui/picker/categories/icons/file_broken.svg"
-dest_files=["res://.godot/imported/file_broken.svg-b3a1f0e4d54ed488e76a2c99c48cdeac.ctex"]
+dest_files=["res://.godot/imported/file_broken.svg-4eaab408643b07ce95d90d59c6c11ee5.ctex"]
 
 [params]
 

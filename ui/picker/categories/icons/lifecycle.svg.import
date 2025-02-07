@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtx1jvrk0xo6u"
-path="res://.godot/imported/lifecycle.svg-2dc482d9c2280183a8f4bb15c0c9238d.ctex"
+path="res://.godot/imported/lifecycle.svg-a03e82f944312da96cc3afcd5fe9b410.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://addons/reblocks/ui/picker/categories/icons/lifecycle.svg"
-dest_files=["res://.godot/imported/lifecycle.svg-2dc482d9c2280183a8f4bb15c0c9238d.ctex"]
+dest_files=["res://.godot/imported/lifecycle.svg-a03e82f944312da96cc3afcd5fe9b410.ctex"]
 
 [params]
 

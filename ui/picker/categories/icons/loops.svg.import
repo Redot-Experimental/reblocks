@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xfxkkou3p0re"
-path="res://.godot/imported/loops.svg-13addc2492f789c9527c263b1105b7d5.ctex"
+path="res://.godot/imported/loops.svg-316da2da589f07c3d0f5428710593245.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://addons/reblocks/ui/picker/categories/icons/loops.svg"
-dest_files=["res://.godot/imported/loops.svg-13addc2492f789c9527c263b1105b7d5.ctex"]
+dest_files=["res://.godot/imported/loops.svg-316da2da589f07c3d0f5428710593245.ctex"]
 
 [params]
 
