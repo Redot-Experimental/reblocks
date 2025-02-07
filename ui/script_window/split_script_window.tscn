@@ -6,7 +6,7 @@
 font_names = PackedStringArray("DejaVu Sans Mono")
 subpixel_positioning = 0
 
-[sub_resource type="CodeHighlighter" id="CodeHighlighter_3qk2k"]
+[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_uc52q"]
 
 [node name="SplitScriptWindow" type="HBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
@@ -41,12 +41,22 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_readonly_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_fonts/font = SubResource("SystemFont_r6ct2")
-text = " "
+text = "extends Node2D
+
+var a: String
+
+
+func _ready():
+    queue_free()
+    ''.queue_free()
+    position = Vector2(100, 100)
+    rotation_degrees = 45
+
+"
 editable = false
-syntax_highlighter = SubResource("CodeHighlighter_3qk2k")
+syntax_highlighter = SubResource("SyntaxHighlighter_uc52q")
 highlight_all_occurrences = true
 highlight_current_line = true
-draw_tabs = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CodeContainer"]
 layout_mode = 2
@@ -58,19 +68,9 @@ theme_override_constants/margin_left = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CodeContainer/HBoxContainer/MarginContainer"]
+[node name="CopyCode" type="Button" parent="PanelContainer/CodeContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
-
-[node name="CopyCode" type="Button" parent="PanelContainer/CodeContainer/HBoxContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 4
 text = "Copy"
 
-[node name="WindowButton" type="Button" parent="PanelContainer/CodeContainer/HBoxContainer/MarginContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 6
-text = "Open Window"
-
-[connection signal="pressed" from="PanelContainer/CodeContainer/HBoxContainer/MarginContainer/HBoxContainer/CopyCode" to="." method="_on_copy_code_pressed"]
-[connection signal="pressed" from="PanelContainer/CodeContainer/HBoxContainer/MarginContainer/HBoxContainer/WindowButton" to="." method="_on_window_button_pressed"]
+[connection signal="pressed" from="PanelContainer/CodeContainer/HBoxContainer/MarginContainer/CopyCode" to="." method="_on_copy_code_pressed"]
