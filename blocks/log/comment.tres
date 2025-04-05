@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c4qpkgyd7kfp4"]
+
+[ext_resource type="Script" path="res://addons/reblocks/code_generation/block_definition.gd" id="1_44emg"]
+
+[resource]
+script = ExtResource("1_44emg")
+name = &"comment"
+target_node_class = ""
+description = "Add a comment to the code"
+category = "Log"
+type = 2
+variant_type = 0
+display_template = "comment {text}"
+code_template = "## {text}"
+defaults = {
+"text": "Hello"
+}
+signal_name = ""
+is_advanced = false

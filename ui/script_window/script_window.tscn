@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5qmyjwv7gaxl"]
+
+[ext_resource type="Script" path="res://addons/reblocks/ui/script_window/script_window.gd" id="1_iw5ag"]
+
+[sub_resource type="SystemFont" id="SystemFont_r6ct2"]
+font_names = PackedStringArray("DejaVu Sans Mono")
+subpixel_positioning = 0
+
+[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_0wnrb"]
+
+[node name="ScriptWindow" type="Window"]
+title = "Block Code Generated GDScript"
+initial_position = 1
+size = Vector2i(750, 750)
+transient = true
+script = ExtResource("1_iw5ag")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Code" type="CodeEdit" parent="PanelContainer/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_readonly_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = SubResource("SystemFont_r6ct2")
+editable = false
+syntax_highlighter = SubResource("SyntaxHighlighter_0wnrb")
+highlight_all_occurrences = true
+highlight_current_line = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBox"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="CopyCode" type="Button" parent="PanelContainer/VBox/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Copy"
+
+[connection signal="pressed" from="PanelContainer/VBox/HBoxContainer/MarginContainer/CopyCode" to="." method="_on_copy_code_pressed"]

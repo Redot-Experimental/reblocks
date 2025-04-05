@@ -1,0 +1,857 @@
+# LANGUAGE translation for Block Coding Plugin for the following files:
+# res://addons/reblocks/block_code_plugin.gd
+# res://addons/reblocks/block_code_node/block_code.gd
+# res://addons/reblocks/blocks/communication/add_node_to_group.tres
+# res://addons/reblocks/blocks/communication/add_to_group.tres
+# res://addons/reblocks/blocks/communication/area2d_on_entered.tres
+# res://addons/reblocks/blocks/communication/area2d_on_exited.tres
+# res://addons/reblocks/blocks/communication/call_method_group.tres
+# res://addons/reblocks/blocks/communication/call_method_node.tres
+# res://addons/reblocks/blocks/communication/define_method.tres
+# res://addons/reblocks/blocks/communication/get_node.gd
+# res://addons/reblocks/blocks/communication/get_node.tres
+# res://addons/reblocks/blocks/communication/groups.gd
+# res://addons/reblocks/blocks/communication/is_in_group.tres
+# res://addons/reblocks/blocks/communication/is_node_in_group.tres
+# res://addons/reblocks/blocks/communication/remove_from_group.tres
+# res://addons/reblocks/blocks/communication/remove_node_from_group.tres
+# res://addons/reblocks/blocks/communication/rigidbody2d_on_entered.tres
+# res://addons/reblocks/blocks/communication/rigidbody2d_on_exited.tres
+# res://addons/reblocks/blocks/graphics/animationplayer_is_playing.tres
+# res://addons/reblocks/blocks/graphics/animationplayer_pause.tres
+# res://addons/reblocks/blocks/graphics/animationplayer_play.gd
+# res://addons/reblocks/blocks/graphics/animationplayer_play.tres
+# res://addons/reblocks/blocks/graphics/animationplayer_stop.tres
+# res://addons/reblocks/blocks/graphics/viewport_center.tres
+# res://addons/reblocks/blocks/graphics/viewport_height.tres
+# res://addons/reblocks/blocks/graphics/viewport_width.tres
+# res://addons/reblocks/blocks/input/characterbody2d_is_on_floor.tres
+# res://addons/reblocks/blocks/input/characterbody2d_move.tres
+# res://addons/reblocks/blocks/input/is_input_actioned.gd
+# res://addons/reblocks/blocks/input/is_input_actioned.tres
+# res://addons/reblocks/blocks/lifecycle/process.tres
+# res://addons/reblocks/blocks/lifecycle/queue_free.tres
+# res://addons/reblocks/blocks/lifecycle/queue_free_node.tres
+# res://addons/reblocks/blocks/lifecycle/ready.tres
+# res://addons/reblocks/blocks/log/breakpoint.tres
+# res://addons/reblocks/blocks/log/concat.tres
+# res://addons/reblocks/blocks/log/print.tres
+# res://addons/reblocks/blocks/logic/and.tres
+# res://addons/reblocks/blocks/logic/compare.tres
+# res://addons/reblocks/blocks/logic/else.tres
+# res://addons/reblocks/blocks/logic/else_if.tres
+# res://addons/reblocks/blocks/logic/if.tres
+# res://addons/reblocks/blocks/logic/not.tres
+# res://addons/reblocks/blocks/logic/or.tres
+# res://addons/reblocks/blocks/loops/await_scene_ready.tres
+# res://addons/reblocks/blocks/loops/break.tres
+# res://addons/reblocks/blocks/loops/continue.tres
+# res://addons/reblocks/blocks/loops/for.tres
+# res://addons/reblocks/blocks/loops/while.tres
+# res://addons/reblocks/blocks/math/add.tres
+# res://addons/reblocks/blocks/math/cos.tres
+# res://addons/reblocks/blocks/math/divide.tres
+# res://addons/reblocks/blocks/math/multiply.tres
+# res://addons/reblocks/blocks/math/pow.tres
+# res://addons/reblocks/blocks/math/randf_range.tres
+# res://addons/reblocks/blocks/math/randi_range.tres
+# res://addons/reblocks/blocks/math/sin.tres
+# res://addons/reblocks/blocks/math/subtract.tres
+# res://addons/reblocks/blocks/math/tan.tres
+# res://addons/reblocks/blocks/math/vector2_x.tres
+# res://addons/reblocks/blocks/math/vector2_y.tres
+# res://addons/reblocks/blocks/math/vector_from_angle.tres
+# res://addons/reblocks/blocks/math/vector_multiply.tres
+# res://addons/reblocks/blocks/physics/characterbody2d_move_and_slide.tres
+# res://addons/reblocks/blocks/sounds/audiostreamplayer_play.tres
+# res://addons/reblocks/blocks/sounds/audiostreamplayer_stop.tres
+# res://addons/reblocks/blocks/sounds/load_sound.tres
+# res://addons/reblocks/blocks/sounds/pause_continue_sound.tres
+# res://addons/reblocks/blocks/sounds/play_sound.tres
+# res://addons/reblocks/blocks/sounds/stop_sound.tres
+# res://addons/reblocks/blocks/spawn/cpuparticles2d_finished.tres
+# res://addons/reblocks/blocks/transform/rigidbody2d_physics_position.tres
+# res://addons/reblocks/blocks/ui/label_set_text.tres
+# res://addons/reblocks/blocks/variables/vector2.tres
+# res://addons/reblocks/code_generation/ast_list.gd
+# res://addons/reblocks/code_generation/block_ast.gd
+# res://addons/reblocks/code_generation/block_definition.gd
+# res://addons/reblocks/code_generation/block_extension.gd
+# res://addons/reblocks/code_generation/blocks_catalog.gd
+# res://addons/reblocks/code_generation/option_data.gd
+# res://addons/reblocks/code_generation/script_generator.gd
+# res://addons/reblocks/code_generation/util.gd
+# res://addons/reblocks/code_generation/variable_definition.gd
+# res://addons/reblocks/drag_manager/drag.gd
+# res://addons/reblocks/drag_manager/drag_manager.gd
+# res://addons/reblocks/drag_manager/drag_manager.tscn
+# res://addons/reblocks/examples/pong_game/ball.tscn
+# res://addons/reblocks/examples/pong_game/goal_area.tscn
+# res://addons/reblocks/examples/pong_game/player_score.tscn
+# res://addons/reblocks/examples/pong_game/pong_game.tscn
+# res://addons/reblocks/examples/pong_game/space.tscn
+# res://addons/reblocks/examples/spawner/ball.tscn
+# res://addons/reblocks/examples/spawner/spawner.tscn
+# res://addons/reblocks/examples/spawner/volatile_ball.tscn
+# res://addons/reblocks/inspector_plugin/block_script_inspector.gd
+# res://addons/reblocks/serialization/block_script_serialization.gd
+# res://addons/reblocks/serialization/block_serialization.gd
+# res://addons/reblocks/serialization/block_serialization_tree.gd
+# res://addons/reblocks/serialization/default_block_script.tres
+# res://addons/reblocks/serialization/value_block_serialization.gd
+# res://addons/reblocks/simple_nodes/simple_character/simple_character.gd
+# res://addons/reblocks/simple_nodes/simple_ending/simple_ending.gd
+# res://addons/reblocks/simple_nodes/simple_scoring/simple_scoring.gd
+# res://addons/reblocks/simple_spawner/simple_spawner.gd
+# res://addons/reblocks/translation/parser.gd
+# res://addons/reblocks/translation/utils.gd
+# res://addons/reblocks/types/types.gd
+# res://addons/reblocks/ui/block_editor_context.gd
+# res://addons/reblocks/ui/block_tree_util.gd
+# res://addons/reblocks/ui/constants.gd
+# res://addons/reblocks/ui/main_panel.gd
+# res://addons/reblocks/ui/main_panel.tscn
+# res://addons/reblocks/ui/util.gd
+# res://addons/reblocks/ui/block_canvas/block_canvas.gd
+# res://addons/reblocks/ui/block_canvas/block_canvas.tscn
+# res://addons/reblocks/ui/blocks/block/block.gd
+# res://addons/reblocks/ui/blocks/control_block/control_block.gd
+# res://addons/reblocks/ui/blocks/control_block/control_block.tscn
+# res://addons/reblocks/ui/blocks/entry_block/entry_block.gd
+# res://addons/reblocks/ui/blocks/entry_block/entry_block.tscn
+# res://addons/reblocks/ui/blocks/parameter_block/parameter_block.gd
+# res://addons/reblocks/ui/blocks/parameter_block/parameter_block.tscn
+# res://addons/reblocks/ui/blocks/statement_block/statement_block.gd
+# res://addons/reblocks/ui/blocks/statement_block/statement_block.tscn
+# res://addons/reblocks/ui/blocks/utilities/background/background.gd
+# res://addons/reblocks/ui/blocks/utilities/background/gutter.gd
+# res://addons/reblocks/ui/blocks/utilities/drag_drop_area/drag_drop_area.gd
+# res://addons/reblocks/ui/blocks/utilities/drag_drop_area/drag_drop_area.tscn
+# res://addons/reblocks/ui/blocks/utilities/parameter_input/parameter_input.gd
+# res://addons/reblocks/ui/blocks/utilities/parameter_input/parameter_input.tscn
+# res://addons/reblocks/ui/blocks/utilities/parameter_output/parameter_output.gd
+# res://addons/reblocks/ui/blocks/utilities/parameter_output/parameter_output.tscn
+# res://addons/reblocks/ui/blocks/utilities/snap_point/snap_point.gd
+# res://addons/reblocks/ui/blocks/utilities/snap_point/snap_point.tscn
+# res://addons/reblocks/ui/blocks/utilities/template_editor/template_editor.gd
+# res://addons/reblocks/ui/blocks/utilities/template_editor/template_editor.tscn
+# res://addons/reblocks/ui/picker/picker.gd
+# res://addons/reblocks/ui/picker/picker.tscn
+# res://addons/reblocks/ui/picker/categories/block_category.gd
+# res://addons/reblocks/ui/picker/categories/block_category_button.gd
+# res://addons/reblocks/ui/picker/categories/block_category_button.tscn
+# res://addons/reblocks/ui/picker/categories/block_category_display.gd
+# res://addons/reblocks/ui/picker/categories/block_category_display.tscn
+# res://addons/reblocks/ui/picker/categories/category_factory.gd
+# res://addons/reblocks/ui/picker/categories/variable_category/create_variable_button.gd
+# res://addons/reblocks/ui/picker/categories/variable_category/create_variable_button.tscn
+# res://addons/reblocks/ui/picker/categories/variable_category/create_variable_dialog.gd
+# res://addons/reblocks/ui/picker/categories/variable_category/create_variable_dialog.tscn
+# res://addons/reblocks/ui/picker/categories/variable_category/variable_category_display.gd
+# res://addons/reblocks/ui/picker/categories/variable_category/variable_category_display.tscn
+# res://addons/reblocks/ui/script_window/script_window.gd
+# res://addons/reblocks/ui/script_window/script_window.tscn
+# res://addons/reblocks/ui/title_bar/title_bar.gd
+# res://addons/reblocks/ui/title_bar/title_bar.tscn
+# res://addons/reblocks/ui/tooltip/tooltip.gd
+# res://addons/reblocks/ui/tooltip/tooltip.tscn
+# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Block Coding Plugin\n"
+"Language-Team: Romanian (https://app.transifex.com/endless-os/teams/9016/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: addons/reblocks/block_code_plugin.gd
+msgid "Regenerate %s POT file"
+msgstr ""
+
+#: addons/reblocks/block_code_plugin.gd
+msgid "Update %s translated files"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/add_node_to_group.tres
+#: addons/reblocks/blocks/communication/add_to_group.tres
+#: addons/reblocks/blocks/communication/is_in_group.tres
+#: addons/reblocks/blocks/communication/is_node_in_group.tres
+#: addons/reblocks/blocks/communication/remove_from_group.tres
+#: addons/reblocks/blocks/communication/remove_node_from_group.tres
+msgid "Communication | Groups"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/add_node_to_group.tres
+msgid "Add the node into the group"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/add_node_to_group.tres
+msgid "add {node: OBJECT} to group {group: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/add_to_group.tres
+msgid "Add this node into the group"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/add_to_group.tres
+msgid "add to group {group: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/area2d_on_entered.tres
+#: addons/reblocks/blocks/communication/area2d_on_exited.tres
+#: addons/reblocks/blocks/communication/call_method_group.tres
+#: addons/reblocks/blocks/communication/call_method_node.tres
+#: addons/reblocks/blocks/communication/define_method.tres
+#: addons/reblocks/blocks/communication/rigidbody2d_on_entered.tres
+#: addons/reblocks/blocks/communication/rigidbody2d_on_exited.tres
+msgid "Communication | Methods"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/area2d_on_entered.tres
+#: addons/reblocks/blocks/communication/rigidbody2d_on_entered.tres
+msgid "when this node collides with [something: OBJECT]"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/area2d_on_exited.tres
+#: addons/reblocks/blocks/communication/rigidbody2d_on_exited.tres
+msgid "when this node stops colliding with [something: OBJECT]"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/call_method_group.tres
+msgid "Calls the method/function on each member of the given group"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/call_method_group.tres
+msgid "call method {method_name: STRING} in group {group: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/call_method_node.tres
+msgid "Calls the method/function of the given node"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/call_method_node.tres
+msgid "call method {method_name: STRING} on node {node: OBJECT}"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/define_method.tres
+msgid "Define a method/function with following statements"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/define_method.tres
+msgid "define method {method_name: STRING_NAME}"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/get_node.tres
+msgid "Communication | Nodes"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/get_node.tres
+msgid "Get the node at the given path"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/get_node.tres
+msgid "{path: NIL}"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/is_in_group.tres
+msgid "Is this node in the group"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/is_in_group.tres
+msgid "is in group {group: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/is_node_in_group.tres
+msgid "Is the node in the group"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/is_node_in_group.tres
+msgid "{node: OBJECT} is in group {group: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/remove_from_group.tres
+msgid "Remove this node from the group"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/remove_from_group.tres
+msgid "remove from group {group: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/remove_node_from_group.tres
+msgid "Remove the node from the group"
+msgstr ""
+
+#: addons/reblocks/blocks/communication/remove_node_from_group.tres
+msgid "remove {node: OBJECT} from group {group: NIL}"
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/animationplayer_is_playing.tres
+#: addons/reblocks/blocks/graphics/animationplayer_pause.tres
+#: addons/reblocks/blocks/graphics/animationplayer_play.tres
+#: addons/reblocks/blocks/graphics/animationplayer_stop.tres
+msgid "Graphics | Animation"
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/animationplayer_is_playing.tres
+msgid "Check if an animation is currently playing."
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/animationplayer_is_playing.tres
+msgid "is playing"
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/animationplayer_pause.tres
+msgid "Pause the currently playing animation."
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/animationplayer_pause.tres
+msgid "pause"
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/animationplayer_play.tres
+msgid "Play the animation."
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/animationplayer_play.tres
+msgid "play {animation: STRING} {direction: NIL} {wait_mode: NIL}"
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/animationplayer_stop.tres
+msgid "Stop the currently playing animation."
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/animationplayer_stop.tres
+#: addons/reblocks/blocks/sounds/audiostreamplayer_stop.tres
+msgid "stop"
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/viewport_center.tres
+#: addons/reblocks/blocks/graphics/viewport_height.tres
+#: addons/reblocks/blocks/graphics/viewport_width.tres
+msgid "Graphics | Viewport"
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/viewport_center.tres
+msgid "Coordinates of the middle of the viewable screen when playing."
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/viewport_center.tres
+msgid "viewport center"
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/viewport_height.tres
+msgid "How tall the viewable screen is when playing."
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/viewport_height.tres
+msgid "viewport height"
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/viewport_width.tres
+msgid "How wide the viewable screen is when playing."
+msgstr ""
+
+#: addons/reblocks/blocks/graphics/viewport_width.tres
+msgid "viewport width"
+msgstr ""
+
+#: addons/reblocks/blocks/input/characterbody2d_is_on_floor.tres
+#: addons/reblocks/blocks/physics/characterbody2d_move_and_slide.tres
+msgid "Physics | Velocity"
+msgstr ""
+
+#: addons/reblocks/blocks/input/characterbody2d_is_on_floor.tres
+msgid "True if the character is on the floor."
+msgstr ""
+
+#: addons/reblocks/blocks/input/characterbody2d_is_on_floor.tres
+msgid "is on floor"
+msgstr ""
+
+#: addons/reblocks/blocks/input/characterbody2d_move.tres
+#: addons/reblocks/blocks/input/is_input_actioned.tres
+msgid "Input"
+msgstr ""
+
+#: addons/reblocks/blocks/input/characterbody2d_move.tres
+msgid ""
+"Move the character up, down, left, and right with the keyboard using the "
+"given keys. The speed of movement can be adjusted separately for x (left and"
+" right) and y (up and down)."
+msgstr ""
+
+#: addons/reblocks/blocks/input/characterbody2d_move.tres
+msgid ""
+"move with keys {up: STRING} {down: STRING} {left: STRING} {right: STRING} at"
+" speed {speed: VECTOR2}"
+msgstr ""
+
+#: addons/reblocks/blocks/input/is_input_actioned.tres
+msgid "True if the specified input action has been pressed or released."
+msgstr ""
+
+#: addons/reblocks/blocks/input/is_input_actioned.tres
+msgid "action {action_name: STRING_NAME} is {action: NIL}"
+msgstr ""
+
+#: addons/reblocks/blocks/lifecycle/process.tres
+#: addons/reblocks/blocks/lifecycle/queue_free.tres
+#: addons/reblocks/blocks/lifecycle/queue_free_node.tres
+#: addons/reblocks/blocks/lifecycle/ready.tres
+msgid "Lifecycle"
+msgstr ""
+
+#: addons/reblocks/blocks/lifecycle/process.tres
+msgid ""
+"Attached blocks will be executed during the processing step of the main loop"
+msgstr ""
+
+#: addons/reblocks/blocks/lifecycle/process.tres
+msgid "every frame"
+msgstr ""
+
+#: addons/reblocks/blocks/lifecycle/queue_free.tres
+msgid "Queues this node to be deleted at the end of the current frame"
+msgstr ""
+
+#: addons/reblocks/blocks/lifecycle/queue_free.tres
+msgid "remove"
+msgstr ""
+
+#: addons/reblocks/blocks/lifecycle/queue_free_node.tres
+msgid "Queues the given node to be deleted at the end of the current frame"
+msgstr ""
+
+#: addons/reblocks/blocks/lifecycle/queue_free_node.tres
+msgid "remove {node: OBJECT}"
+msgstr ""
+
+#: addons/reblocks/blocks/lifecycle/ready.tres
+msgid "Attached blocks will be executed once when the node is \"ready\""
+msgstr ""
+
+#: addons/reblocks/blocks/lifecycle/ready.tres
+msgid "when starting"
+msgstr ""
+
+#: addons/reblocks/blocks/log/breakpoint.tres
+#: addons/reblocks/blocks/log/concat.tres
+#: addons/reblocks/blocks/log/print.tres
+msgid "Log"
+msgstr ""
+
+#: addons/reblocks/blocks/log/breakpoint.tres
+msgid "Pause execution and show the current line of code in the debugger."
+msgstr ""
+
+#: addons/reblocks/blocks/log/breakpoint.tres
+msgid "breakpoint"
+msgstr ""
+
+#: addons/reblocks/blocks/log/concat.tres
+msgid "{string1: STRING} + {string2: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/log/print.tres
+msgid "Print the text to output"
+msgstr ""
+
+#: addons/reblocks/blocks/log/print.tres
+msgid "log text {text: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/and.tres
+#: addons/reblocks/blocks/logic/not.tres
+#: addons/reblocks/blocks/logic/or.tres
+msgid "Logic | Boolean"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/and.tres
+msgid "{bool1: BOOL} and {bool2: BOOL}"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/compare.tres
+msgid "Logic | Comparison"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/compare.tres
+msgid "{float1: FLOAT} {op: NIL} {float2: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/else.tres
+#: addons/reblocks/blocks/logic/else_if.tres
+#: addons/reblocks/blocks/logic/if.tres
+msgid "Logic | Conditionals"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/else.tres
+msgid "else"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/else_if.tres
+msgid "else if {condition: BOOL}"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/if.tres
+msgid "if {condition: BOOL}"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/not.tres
+msgid "not {bool: BOOL}"
+msgstr ""
+
+#: addons/reblocks/blocks/logic/or.tres
+msgid "{bool1: BOOL} or {bool2: BOOL}"
+msgstr ""
+
+#: addons/reblocks/blocks/loops/await_scene_ready.tres
+#: addons/reblocks/blocks/loops/break.tres
+#: addons/reblocks/blocks/loops/continue.tres
+#: addons/reblocks/blocks/loops/for.tres
+#: addons/reblocks/blocks/loops/while.tres
+msgid "Loops"
+msgstr ""
+
+#: addons/reblocks/blocks/loops/await_scene_ready.tres
+msgid "wait for the scene to be ready"
+msgstr ""
+
+#: addons/reblocks/blocks/loops/break.tres
+msgid "break"
+msgstr ""
+
+#: addons/reblocks/blocks/loops/continue.tres
+msgid "continue"
+msgstr ""
+
+#: addons/reblocks/blocks/loops/for.tres
+msgid "Run the connected blocks [i]number[/i] times"
+msgstr ""
+
+#: addons/reblocks/blocks/loops/for.tres
+msgid "repeat {number: INT}"
+msgstr ""
+
+#: addons/reblocks/blocks/loops/while.tres
+msgid ""
+"Run the connected blocks as long as [i]condition[/i] is true.\n"
+"\n"
+"Hint: snap a [b]Comparison[/b] block into the condition."
+msgstr ""
+
+#: addons/reblocks/blocks/loops/while.tres
+msgid "while {condition: BOOL}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/add.tres
+#: addons/reblocks/blocks/math/cos.tres
+#: addons/reblocks/blocks/math/divide.tres
+#: addons/reblocks/blocks/math/multiply.tres
+#: addons/reblocks/blocks/math/pow.tres
+#: addons/reblocks/blocks/math/randf_range.tres
+#: addons/reblocks/blocks/math/randi_range.tres
+#: addons/reblocks/blocks/math/sin.tres
+#: addons/reblocks/blocks/math/subtract.tres
+#: addons/reblocks/blocks/math/tan.tres
+#: addons/reblocks/blocks/math/vector2_x.tres
+#: addons/reblocks/blocks/math/vector2_y.tres
+#: addons/reblocks/blocks/math/vector_from_angle.tres
+#: addons/reblocks/blocks/math/vector_multiply.tres
+#: addons/reblocks/blocks/variables/vector2.tres
+msgid "Math"
+msgstr ""
+
+#: addons/reblocks/blocks/math/add.tres
+msgid "{a: FLOAT} + {b: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/cos.tres
+msgid "Calculate the cosine of [i]angle[/i]"
+msgstr ""
+
+#: addons/reblocks/blocks/math/cos.tres
+msgid "cos {angle: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/divide.tres
+msgid "{a: FLOAT} / {b: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/multiply.tres
+msgid "{a: FLOAT} * {b: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/pow.tres
+msgid "{base: FLOAT} ^ {exp: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/randf_range.tres
+msgid ""
+"Generate a random floating point number between [i]from[/i] and [i]to[/i] "
+"inclusively"
+msgstr ""
+
+#: addons/reblocks/blocks/math/randf_range.tres
+msgid "random floating point number between {from: FLOAT} and {to: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/randi_range.tres
+msgid ""
+"Generate a random signed 32-bits integer number between [i]from[/i] and "
+"[i]to[/i] inclusively. [i]from[/i] and [i]to[/i] can be a negative or "
+"positive number"
+msgstr ""
+
+#: addons/reblocks/blocks/math/randi_range.tres
+msgid "random integer number between {from: INT} and {to: INT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/sin.tres
+msgid "Calculate the sine of [i]angle[/i]"
+msgstr ""
+
+#: addons/reblocks/blocks/math/sin.tres
+msgid "sin {angle: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/subtract.tres
+msgid "{a: FLOAT} - {b: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/tan.tres
+msgid "Calculate the tangent of [i]angle[/i]"
+msgstr ""
+
+#: addons/reblocks/blocks/math/tan.tres
+msgid "tan {angle: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/vector2_x.tres
+msgid "Gives the x of a [i]Vector2[/i]"
+msgstr ""
+
+#: addons/reblocks/blocks/math/vector2_x.tres
+msgid "x of {vector2: VECTOR2}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/vector2_y.tres
+msgid "Gives the y of a [i]Vector2[/i]"
+msgstr ""
+
+#: addons/reblocks/blocks/math/vector2_y.tres
+msgid "y of {vector2: VECTOR2}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/vector_from_angle.tres
+msgid "Creates a unit Vector2 rotated to the given angle in radians."
+msgstr ""
+
+#: addons/reblocks/blocks/math/vector_from_angle.tres
+msgid "vector from {angle: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/math/vector_multiply.tres
+msgid ""
+"Multiplies a vector with a number. Use this, for example, to get a point "
+"some distance away along an angle."
+msgstr ""
+
+#: addons/reblocks/blocks/math/vector_multiply.tres
+msgid "multiply {vector: VECTOR2} by {number: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/physics/characterbody2d_move_and_slide.tres
+msgid "move and slide"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/audiostreamplayer_play.tres
+#: addons/reblocks/blocks/sounds/audiostreamplayer_stop.tres
+#: addons/reblocks/blocks/sounds/load_sound.tres
+#: addons/reblocks/blocks/sounds/pause_continue_sound.tres
+#: addons/reblocks/blocks/sounds/play_sound.tres
+#: addons/reblocks/blocks/sounds/stop_sound.tres
+msgid "Sounds"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/audiostreamplayer_play.tres
+msgid "Play the audio stream"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/audiostreamplayer_play.tres
+msgid "play"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/audiostreamplayer_stop.tres
+#: addons/reblocks/blocks/sounds/stop_sound.tres
+msgid "Stop the audio stream"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/load_sound.tres
+msgid "Load a resource file as the audio stream"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/load_sound.tres
+msgid "load file {file_path: STRING} as sound {name: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/pause_continue_sound.tres
+msgid "Pause/Continue the audio stream"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/pause_continue_sound.tres
+msgid "{pause: NIL} the sound {name: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/play_sound.tres
+msgid "Play the audio stream with volume and pitch"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/play_sound.tres
+msgid ""
+"play the sound {name: STRING} with volume {db: FLOAT} dB and pitch scale "
+"{pitch: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/blocks/sounds/stop_sound.tres
+msgid "stop the sound {name: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/spawn/cpuparticles2d_finished.tres
+msgid "Lifecycle | Spawn"
+msgstr ""
+
+#: addons/reblocks/blocks/spawn/cpuparticles2d_finished.tres
+msgid "Emitted when all active particles have finished processing."
+msgstr ""
+
+#: addons/reblocks/blocks/spawn/cpuparticles2d_finished.tres
+msgid "when particles are finished"
+msgstr ""
+
+#: addons/reblocks/blocks/transform/rigidbody2d_physics_position.tres
+msgid "Transform | Position"
+msgstr ""
+
+#: addons/reblocks/blocks/transform/rigidbody2d_physics_position.tres
+msgid "set physics position {position: VECTOR2}"
+msgstr ""
+
+#: addons/reblocks/blocks/ui/label_set_text.tres
+msgid "UI"
+msgstr ""
+
+#: addons/reblocks/blocks/ui/label_set_text.tres
+msgid "Set the text for the label."
+msgstr ""
+
+#: addons/reblocks/blocks/ui/label_set_text.tres
+msgid "set text to {text: STRING}"
+msgstr ""
+
+#: addons/reblocks/blocks/variables/vector2.tres
+msgid "vector2 x: {x: FLOAT} y: {y: FLOAT}"
+msgstr ""
+
+#: addons/reblocks/examples/spawner/spawner.tscn
+msgid ""
+"[b]Up arrow:[/b] Start/stop spawning.\n"
+"[b]Down arrow:[/b] Spawn once.\n"
+"[b]Left arrow:[/b] Reduce spawn frequency.\n"
+"[b]Right arrow:[/b] Increase spawn frequency.\n"
+"\n"
+"From the Inspector: Try changing spawn limit and spawn limit behavior.\n"
+"\n"
+"Color balls remove themselves after 3 seconds. While uncolored balls are only removed by the SimpleSpawner node according to the limit setings."
+msgstr ""
+
+#: addons/reblocks/inspector_plugin/block_script_inspector.gd
+msgid "Open Block Script"
+msgstr ""
+
+#: addons/reblocks/simple_nodes/simple_scoring/simple_scoring.gd
+msgid "0"
+msgstr ""
+
+#: addons/reblocks/ui/main_panel.tscn
+msgid "Show Generated Script"
+msgstr ""
+
+#: addons/reblocks/ui/main_panel.tscn
+msgid "Delete Block Code"
+msgstr ""
+
+#: addons/reblocks/ui/main_panel.tscn
+msgid "Toggle Block Picker (Ctrl+BackSlash)"
+msgstr ""
+
+#: addons/reblocks/ui/block_canvas/block_canvas.tscn
+msgid "1.0x"
+msgstr ""
+
+#: addons/reblocks/ui/block_canvas/block_canvas.tscn
+msgid "Select a node to create and edit block code."
+msgstr ""
+
+#: addons/reblocks/ui/block_canvas/block_canvas.tscn
+msgid ""
+"Use block coding to create custom behavior and game mechanics for "
+"\"{node}\"."
+msgstr ""
+
+#: addons/reblocks/ui/block_canvas/block_canvas.tscn
+msgid "Add Block Code"
+msgstr ""
+
+#: addons/reblocks/ui/block_canvas/block_canvas.tscn
+msgid "\"{node}\" uses block coding."
+msgstr ""
+
+#: addons/reblocks/ui/block_canvas/block_canvas.tscn
+msgid "Open in Editor"
+msgstr ""
+
+#: addons/reblocks/ui/block_canvas/block_canvas.tscn
+msgid "Override Block Code"
+msgstr ""
+
+#: addons/reblocks/ui/blocks/block/block.gd
+msgid "Type:"
+msgstr ""
+
+#: addons/reblocks/ui/blocks/utilities/parameter_input/parameter_input.tscn
+msgid "Parameter"
+msgstr ""
+
+#: addons/reblocks/ui/picker/categories/block_category_button.tscn
+msgid "Example"
+msgstr ""
+
+#: addons/reblocks/ui/picker/categories/variable_category/create_variable_button.tscn
+#: addons/reblocks/ui/picker/categories/variable_category/create_variable_dialog.tscn
+msgid "Create New Variable"
+msgstr ""
+
+#: addons/reblocks/ui/picker/categories/variable_category/create_variable_dialog.tscn
+msgid "Create"
+msgstr ""
+
+#: addons/reblocks/ui/picker/categories/variable_category/create_variable_dialog.tscn
+msgid "Name "
+msgstr ""
+
+#: addons/reblocks/ui/picker/categories/variable_category/create_variable_dialog.tscn
+msgid "Type "
+msgstr ""
+
+#: addons/reblocks/ui/script_window/script_window.tscn
+msgid "Block Code Generated GDScript"
+msgstr ""
+
+#: addons/reblocks/ui/script_window/script_window.tscn
+msgid "Copy"
+msgstr ""
