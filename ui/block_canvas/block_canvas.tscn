@@ -169,3 +169,4 @@ icon = ExtResource("2_710vn")
 [connection signal="pressed" from="SelectedNodeBox/ButtonsBox/AddBlockCodeButton" to="." method="_on_add_block_code_button_pressed"]
 [connection signal="pressed" from="SelectedNodeWithBlockCodeBox/ButtonsBox/OpenSceneButton" to="." method="_on_open_scene_button_pressed"]
 [connection signal="pressed" from="SelectedNodeWithBlockCodeBox/ButtonsBox/ReplaceBlockCodeButton" to="." method="_on_replace_block_code_button_pressed"]
+
