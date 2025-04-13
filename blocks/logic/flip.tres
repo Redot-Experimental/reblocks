@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d3yr42a1ba0c8"]
+
+[ext_resource type="Script" path="res://addons/reblocks/code_generation/block_definition.gd" id="1_nsxuk"]
+
+[resource]
+script = ExtResource("1_nsxuk")
+name = &"flip"
+target_node_class = ""
+description = ""
+category = "Logic | Conditionals"
+type = 2
+variant_type = 0
+display_template = "flip {condition: BOOL}"
+code_template = "flip_h  = {condition}"
+defaults = {}
+signal_name = ""
+is_advanced = false
