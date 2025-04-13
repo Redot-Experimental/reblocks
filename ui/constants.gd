@@ -150,4 +150,9 @@ const BUILTIN_CATEGORIES_PROPS: Dictionary = {
 		"color": Color("002050"),
 		"order": 200,
 	},
+	"Node | Properties":
+	{
+		"color": Color("002050"),
+		"order": 210,
+	}
 }

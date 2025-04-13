@@ -25,3 +25,4 @@ defaults = {
 signal_name = ""
 is_advanced = false
 extension_script = ExtResource("1_we5wl")
+

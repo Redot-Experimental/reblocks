@@ -107,6 +107,8 @@ const _SETTINGS_FOR_CLASS_PROPERTY = {
 			"has_change": false,
 		},
 	},
+	
+
 }
 
 static var _catalog: Dictionary
